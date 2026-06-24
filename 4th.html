@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fruit Cost Calculator</title>
+</head>
+<body>
+
+<label>
+<input type="checkbox" id="apple"> Apple (59c)
+Qty: <input type="number" id="apple_qty" value="0">
+</label><br><br>
+
+<label>
+<input type="checkbox" id="orange"> Orange (49c)
+Qty: <input type="number" id="orange_qty" value="0">
+</label><br><br>
+
+<label>
+<input type="checkbox" id="banana"> Banana (39c)
+Qty: <input type="number" id="banana_qty" value="0">
+</label><br><br>
+
+<button onclick="calculateTotal()">Submit</button>
+
+<script>
+function calculateTotal(){
+ let t=0;
+
+ if(apple.checked)
+   t+=0.59*apple_qty.value;
+
+ if(orange.checked)
+   t+=0.49*orange_qty.value;
+
+ if(banana.checked)
+   t+=0.39*banana_qty.value;
+
+ alert("Total Cost = $"+(t*1.05).toFixed(2));
+}
+</script>
+
+</body>
+</html>
