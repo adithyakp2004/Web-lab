@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fibonacci & Squares</title>
+
+<script>
+function fib(){
+  let n=prompt("Enter number","5"),a=0,b=1,t,s="Fibonacci Series:\n";
+  for(let i=0;i<n;i++){
+    s+=a+" ";
+    t=a+b; a=b; b=t;
+  }
+  alert(s);
+}
+
+function sq(){
+  let n=prompt("Enter number","5"),s="Number  Square\n";
+  for(let i=1;i<=n;i++)
+    s+=i+"      "+i*i+"\n";
+  alert(s);
+}
+</script>
+
+</head>
+<body>
+
+<input type="button" value="Fibonacci Series" onclick="fib()"><br><br>
+<input type="button" value="Squares Table" onclick="sq()">
+
+</body>
+</html>
