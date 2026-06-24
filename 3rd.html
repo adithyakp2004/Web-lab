@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stack Ordering</title>
+
+<style>
+.layer{
+  border:2px solid black;
+  width:300px;
+  height:200px;
+  padding:10px;
+  position:absolute;
+  z-index:0;
+}
+
+#layer1{background:red;top:140px;left:240px;}
+#layer2{background:green;top:120px;left:220px;}
+#layer3{background:blue;top:100px;left:200px;}
+</style>
+
+<script>
+var t=layer3;
+
+function mover(x){
+  t.style.zIndex=0;
+  x.style.zIndex=1;
+  t=x;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<p id="layer1" class="layer" onmouseover="mover(layer1)">
+  This is the first layer
+</p>
+
+<p id="layer2" class="layer" onmouseover="mover(layer2)">
+  This is the middle layer
+</p>
+
+<p id="layer3" class="layer" onmouseover="mover(layer3)">
+  This is the last layer
+</p>
+
+</body>
+</html>
